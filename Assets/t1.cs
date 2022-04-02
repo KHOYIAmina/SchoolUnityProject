@@ -10,17 +10,20 @@ public class t1 : MonoBehaviour
     public GameObject player;
     public GameObject obt;
     public GameObject obt2;
+    public GameObject Panel;
     // Start is called before the first frame update
     void Start()
     {
         obt.SetActive(false);
         obt2.SetActive(false);
+        Panel.SetActive(false);
     }
 
     // Update is called once per frame
     void OnTriggerEnter()
     { 
         player.GetComponent<FirstPersonController>().enabled=false;
+        Panel.SetActive(true);
         obt.SetActive(true);
         StartCoroutine("Ws");
         
@@ -28,8 +31,10 @@ public class t1 : MonoBehaviour
     IEnumerator Ws(){
         yield return new WaitForSeconds(5);
         Destroy(obt);
+        
         obt2.SetActive(true);
         StartCoroutine("Ws2");
+        
         //Destroy(gameObject);
         //player.GetComponent<FirstPersonController>().enabled=true;
     }
@@ -37,6 +42,7 @@ public class t1 : MonoBehaviour
         yield return new WaitForSeconds(5);
         Destroy(obt2);
         Destroy(gameObject);
+        Panel.SetActive(false);
         player.GetComponent<FirstPersonController>().enabled=true;
     }
   /*  void OnTriggerExit()
