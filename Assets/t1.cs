@@ -34,7 +34,7 @@ public class t1 : MonoBehaviour
         
         obt2.SetActive(true);
         StartCoroutine("Ws2");
-        
+
         //Destroy(gameObject);
         //player.GetComponent<FirstPersonController>().enabled=true;
     }
@@ -45,6 +45,9 @@ public class t1 : MonoBehaviour
         Panel.SetActive(false);
         player.GetComponent<FirstPersonController>().enabled=true;
     }
+
+
+
   /*  void OnTriggerExit()
     {
         obt.SetActive(false);
