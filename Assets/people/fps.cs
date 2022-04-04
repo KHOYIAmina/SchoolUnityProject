@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class fps : MonoBehaviour
 {
+    public GameObject ThePlayer;
     // Start is called before the first frame update
     void Start()
     {
-        this.GetComponent<Animator>().enabled = false;
+        ThePlayer.GetComponent<Animator>().enabled = false;
     }
 
     // Update is called once per frame
-    void Update()
+    void OnMouseOver()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            this.GetComponent<Animator>().Play("FPS1");
+            ThePlayer.GetComponent<Animator>().Play("FPS1");
         }
     }
 }
