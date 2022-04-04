@@ -11,6 +11,8 @@ public class t1 : MonoBehaviour
     public GameObject obt;
     public GameObject obt2;
     public GameObject Panel;
+    public GameObject choButton1;
+    public GameObject choButton2;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,22 +31,30 @@ public class t1 : MonoBehaviour
         
     }
     IEnumerator Ws(){
-        yield return new WaitForSeconds(5);
-        Destroy(obt);
+        yield return new WaitForSeconds(1);
+        choButton1.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         
-        obt2.SetActive(true);
-        StartCoroutine("Ws2");
 
         //Destroy(gameObject);
         //player.GetComponent<FirstPersonController>().enabled=true;
     }
-    IEnumerator Ws2(){
-        yield return new WaitForSeconds(5);
-        Destroy(obt2);
+    public void next1(){
+        choButton1.SetActive(false);
+        choButton2.SetActive(true);
+        Destroy(obt);
+        obt2.SetActive(true);
+        
+    }
+    public void next2(){
+         Destroy(obt2);
         Destroy(gameObject);
         Panel.SetActive(false);
         player.GetComponent<FirstPersonController>().enabled=true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
+    
 
 
 
