@@ -13,6 +13,8 @@ public class t1 : MonoBehaviour
     public GameObject Panel;
     public GameObject choButton1;
     public GameObject choButton2;
+    public AudioSource ButtonAudioSource = null;
+    public float Button = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,19 +46,18 @@ public class t1 : MonoBehaviour
         choButton1.SetActive(false);
         choButton2.SetActive(true);
         Destroy(obt);
+        ButtonAudioSource.PlayDelayed(Button);
         obt2.SetActive(true);
         
     }
     public void next2(){
          Destroy(obt2);
         Destroy(gameObject);
+        ButtonAudioSource.PlayDelayed(Button);
         Panel.SetActive(false);
         player.GetComponent<FirstPersonController>().enabled=true;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-  /*  void OnTriggerExit()
-    {
-        obt.SetActive(false);
-    }*/
+  
 }
