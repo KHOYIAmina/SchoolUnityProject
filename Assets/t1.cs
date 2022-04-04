@@ -54,9 +54,6 @@ public class t1 : MonoBehaviour
         player.GetComponent<FirstPersonController>().enabled=true;
         Cursor.lockState = CursorLockMode.Locked;
     }
-    
-
-
 
   /*  void OnTriggerExit()
     {
