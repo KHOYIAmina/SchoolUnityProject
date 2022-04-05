@@ -12,7 +12,7 @@ public class fps : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ActionDisplay.SetActive(false);
+        
         ThePlayer.GetComponent<Animator>().enabled = false;
         TheCamera.GetComponent<Animator>().enabled = false;
     }
@@ -27,8 +27,9 @@ public class fps : MonoBehaviour
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPS");
             TheCamera.GetComponent<Animator>().Play("cfps");
+            ActionDisplay.SetActive(false);
         }
-        ActionDisplay.SetActive(false);
+        
     }
     void OnMouseExit()
     {

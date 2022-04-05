@@ -14,23 +14,24 @@ public class FP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        ActionDisplay.SetActive(false);
-        ThePlayer.GetComponent<Animator>().enabled = false;
-        TheCamera.GetComponent<Animator>().enabled = false;
+        ThePlayer.GetComponent<Animator>().enabled = true;
+        TheCamera.GetComponent<Animator>().enabled = true;
     }
 
    
     void OnMouseOver()
     {
-        ActionDisplay.SetActive(true);
+         ActionDisplay.SetActive(true);
         if (Input.GetKeyDown(KeyCode.F))
         {
-        ThePlayer.GetComponent<Animator>().enabled = true;
-        TheCamera.GetComponent<Animator>().enabled = true;
-        ThePlayer.GetComponent<Animator>().Play("FPS2");
-        TheCamera.GetComponent<Animator>().Play("cfps2");
+
+            ThePlayer.GetComponent<Animator>().Play("FPS2");
+            TheCamera.GetComponent<Animator>().Play("cfps2"); 
+            ThePlayer.GetComponent<Animator>().enabled = true;
+            TheCamera.GetComponent<Animator>().enabled = true;
+            ActionDisplay.SetActive(false);       
         }
-        ActionDisplay.SetActive(false);
+        
     }
     void OnMouseExit()
     {
