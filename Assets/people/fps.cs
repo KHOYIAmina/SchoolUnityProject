@@ -41,6 +41,8 @@ public class fps : MonoBehaviour
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2");
+            ThePlayer.GetComponent<Animator>().enabled = false;
+        TheCamera.GetComponent<Animator>().enabled = false;
         
     }
 }
