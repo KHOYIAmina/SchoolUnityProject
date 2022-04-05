@@ -27,13 +27,13 @@ public class fps : MonoBehaviour
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPS");
             TheCamera.GetComponent<Animator>().Play("cfps");
-            ActionDisplay.SetActive(false);
+            
         }
         
     }
     void OnMouseExit()
     {
-         Cursor.visible = true;
+         ActionDisplay.SetActive(false);
     }
 
 }
