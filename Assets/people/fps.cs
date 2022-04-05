@@ -9,7 +9,7 @@ public class fps : MonoBehaviour
     public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
-    public static int i=0;
+    public static bool i=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class fps : MonoBehaviour
         ActionDisplay.SetActive(true);
         if (Input.GetKeyDown(KeyCode.E))
         {
-            i=1;
+            i=true;
             ThePlayer.GetComponent<Animator>().enabled = true;
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPS");
@@ -32,7 +32,7 @@ public class fps : MonoBehaviour
             
         }else
         {
-            i=0;
+            i=false;
         }
         
     }
