@@ -11,6 +11,7 @@ public class FP : MonoBehaviour
    public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
+    int j; 
     // Start is called before the first frame update
    /* void Start()
     { 
@@ -18,10 +19,16 @@ public class FP : MonoBehaviour
         TheCamera.GetComponent<Animator>().enabled = true;
     }*/
 
-   
+   void Update()
+    {
+        j=fps.i;
+        
+    }
     void OnMouseOver()
     {
-         ActionDisplay.SetActive(true);
+        if (j==1)
+        {
+             ActionDisplay.SetActive(true);}
         if (Input.GetKeyDown(KeyCode.F))
         {
             ThePlayer.GetComponent<Animator>().enabled = true;
@@ -30,6 +37,8 @@ public class FP : MonoBehaviour
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
             StartCoroutine("Ws");
         }
+        
+        
         
     }
     IEnumerator Ws(){
