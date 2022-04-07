@@ -14,6 +14,7 @@ public class FP : MonoBehaviour
     // public GameObject subText;
     public GameObject TheNPC;
     public AudioSource ButtonAudioSource = null;
+    AudioSource ButtonAudioSource1 = null;
     public float Button = 0;
     bool j; 
     // Start is called before the first frame update
@@ -45,10 +46,17 @@ public class FP : MonoBehaviour
         {
             
                 TheNPC.GetComponent<Animator>().Play("Idle");
+                if (j)
+        {
                 ButtonAudioSource.PlayDelayed(Button);
+        }else
+        {
+             ButtonAudioSource1.PlayDelayed(Button);
+             }
                 // subText.GetComponent<Text>().text = "Bonjour tous le monde, aujourd'hui est votre premier cour de cette année.";
                 // StartCoroutine(StartSelectConvo());
         }
+         
           
     }
     /*IEnumerator StartSelectConvo()
