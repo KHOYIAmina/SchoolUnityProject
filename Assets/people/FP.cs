@@ -14,8 +14,7 @@ public class FP : MonoBehaviour
     // public GameObject subText;
     public GameObject TheNPC;
     public AudioSource ButtonAudioSource = null;
-    AudioSource ButtonAudioSource1 = null;
-    public float Button = 0;
+     public float Button = 0;
     bool j; 
     // Start is called before the first frame update
    /* void Start()
@@ -41,6 +40,7 @@ public class FP : MonoBehaviour
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
+            ButtonAudioSource.Stop();
             StartCoroutine("Ws");
         }else if (Input.GetKeyDown(KeyCode.T))
         {
@@ -49,10 +49,7 @@ public class FP : MonoBehaviour
                 if (j)
         {
                 ButtonAudioSource.PlayDelayed(Button);
-        }else
-        {
-             ButtonAudioSource1.PlayDelayed(Button);
-             }
+        }
                 // subText.GetComponent<Text>().text = "Bonjour tous le monde, aujourd'hui est votre premier cour de cette année.";
                 // StartCoroutine(StartSelectConvo());
         }
