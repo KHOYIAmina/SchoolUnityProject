@@ -11,6 +11,7 @@ public class FP : MonoBehaviour
    public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
+    public GameObject ppt;
     // public GameObject subText;
     public GameObject TheNPC;
     public AudioSource ButtonAudioSource = null;
@@ -41,6 +42,7 @@ public class FP : MonoBehaviour
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
             ButtonAudioSource.Stop();
+            ppt.GetComponent<MeshRenderer>().enabled =  false;
             StartCoroutine("Ws");
         }else if (Input.GetKeyDown(KeyCode.T))
         {
