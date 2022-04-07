@@ -15,7 +15,10 @@ public class FP : MonoBehaviour
     // public GameObject subText;
     public GameObject TheNPC;
     public AudioSource ButtonAudioSource = null;
+    public AudioSource ButtonAudioSource1 = null;
+    public AudioSource ButtonAudioSource2 = null;
      public float Button = 0;
+    
     bool j; 
     // Start is called before the first frame update
    /* void Start()
@@ -51,6 +54,8 @@ public class FP : MonoBehaviour
                 if (j)
         {
                 ButtonAudioSource.PlayDelayed(Button);
+                ButtonAudioSource1.PlayDelayed(80f);
+                ButtonAudioSource2.PlayDelayed(86f);
         }
                 // subText.GetComponent<Text>().text = "Bonjour tous le monde, aujourd'hui est votre premier cour de cette année.";
                 // StartCoroutine(StartSelectConvo());
