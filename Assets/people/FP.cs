@@ -11,8 +11,10 @@ public class FP : MonoBehaviour
    public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
-    //public GameObject subText;
-    //public GameObject TheNPC;
+    // public GameObject subText;
+    public GameObject TheNPC;
+    public AudioSource ButtonAudioSource = null;
+    public float Button = 0;
     bool j; 
     // Start is called before the first frame update
    /* void Start()
@@ -39,24 +41,24 @@ public class FP : MonoBehaviour
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
             StartCoroutine("Ws");
-        }/*else if (Input.GetKeyDown(KeyCode.T))
+        }else if (Input.GetKeyDown(KeyCode.T))
         {
-            TheNPC.transform.LookAt(new Vector3(ThePlayer.transform.position.x,this.transform.position.y, ThePlayer.transform.position.z));
+            
                 TheNPC.GetComponent<Animator>().Play("Idle");
-                
-                subText.GetComponent<Text>().text = "Bonjour tous le monde, aujourd'hui est votre premier cour de cette année.";
-                StartCoroutine(StartSelectConvo());
+                ButtonAudioSource.PlayDelayed(Button);
+                // subText.GetComponent<Text>().text = "Bonjour tous le monde, aujourd'hui est votre premier cour de cette année.";
+                // StartCoroutine(StartSelectConvo());
         }
           
     }
-    IEnumerator StartSelectConvo()
+    /*IEnumerator StartSelectConvo()
     {
         yield return new WaitForSeconds(4.9f);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         subText.GetComponent<Text>().text = "Vous voulez continuer?";
-       */
-    }
+       
+    }*/
     IEnumerator Ws(){
         yield return new WaitForSeconds(0.1f);
         ThePlayer.GetComponent<Animator>().enabled = false;
