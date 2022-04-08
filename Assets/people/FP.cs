@@ -11,14 +11,13 @@ public class FP : MonoBehaviour
    public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
-    public GameObject ppt;
+    public GameObject ppt ;
     // public GameObject subText;
     public GameObject TheNPC;
     public AudioSource ButtonAudioSource = null;
     public AudioSource ButtonAudioSource1 = null;
     public AudioSource ButtonAudioSource2 = null;
      public float Button = 0;
-    
     bool j; 
     // Start is called before the first frame update
    /* void Start()
@@ -36,8 +35,9 @@ public class FP : MonoBehaviour
     {
         if (j)
         {
-             ActionDisplay.SetActive(true);
-             }
+            ActionDisplay.SetActive(true);
+
+        }
         if (Input.GetKeyDown(KeyCode.F))
         {
             ThePlayer.GetComponent<Animator>().enabled = true;
@@ -45,7 +45,9 @@ public class FP : MonoBehaviour
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
             ButtonAudioSource.Stop();
-            ppt.GetComponent<MeshRenderer>().enabled =  false;
+            ButtonAudioSource1.Stop();
+            ButtonAudioSource2.Stop();
+            ppt.GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine("Ws");
         }else if (Input.GetKeyDown(KeyCode.T))
         {
@@ -63,6 +65,8 @@ public class FP : MonoBehaviour
          
           
     }
+
+
     /*IEnumerator StartSelectConvo()
     {
         yield return new WaitForSeconds(4.9f);

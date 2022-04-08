@@ -6,10 +6,13 @@ using UnityEngine.AI;
 using UnityStandardAssets.Characters.FirstPerson;
 public class fps : MonoBehaviour
 {
+        public GameObject obt;
+    public GameObject Panel;
     public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
     public GameObject ppt;
+
     // public AudioSource ButtonAudioSource = null;
     // public float Button = 0;
     public static bool i=false;
@@ -19,6 +22,8 @@ public class fps : MonoBehaviour
         
         ThePlayer.GetComponent<Animator>().enabled = false;
         TheCamera.GetComponent<Animator>().enabled = false;
+        obt.SetActive(false);
+        Panel.SetActive(false);  
     }
 
    
@@ -32,6 +37,7 @@ public class fps : MonoBehaviour
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPS");
             TheCamera.GetComponent<Animator>().Play("cfps");
+
             // ButtonAudioSource.PlayDelayed(Button);
             ppt.GetComponent<MeshRenderer>().enabled = true;
             
@@ -43,6 +49,11 @@ public class fps : MonoBehaviour
         }
         
     }
+
+
+
+
+    
     void OnMouseExit()
     {
          ActionDisplay.SetActive(false);
