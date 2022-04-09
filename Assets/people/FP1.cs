@@ -12,7 +12,7 @@ public class FP1 : MonoBehaviour
     public GameObject ThePlayer;
     public GameObject TheCamera;
     public AudioSource ButtonAudioSource = null;
-
+  
      public float Button = 0;
     bool j; 
     // Start is called before the first frame update
@@ -41,11 +41,13 @@ public class FP1 : MonoBehaviour
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
             ButtonAudioSource.Stop();
+           
             StartCoroutine("Ws");
         }else if (Input.GetKeyDown(KeyCode.T))
         {
                 if (j)
         {
+              
                 ButtonAudioSource.PlayDelayed(Button);
         }
                 // subText.GetComponent<Text>().text = "Bonjour tous le monde, aujourd'hui est votre premier cour de cette année.";
