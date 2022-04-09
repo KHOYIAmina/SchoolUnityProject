@@ -24,7 +24,7 @@ public class FP1 : MonoBehaviour
 
    void Update()
     {
-        j=fps.i;
+        j=fpsInfo.i;
         
     }
     void OnMouseOver()

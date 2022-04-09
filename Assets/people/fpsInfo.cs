@@ -34,7 +34,7 @@ public class fpsInfo : MonoBehaviour
             ThePlayer.GetComponent<Animator>().enabled = true;
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPSInfo");
-            TheCamera.GetComponent<Animator>().Play("cfps");
+            TheCamera.GetComponent<Animator>().Play("cfpsInfo");
 
             // ButtonAudioSource.PlayDelayed(Button);
             // ppt.GetComponent<MeshRenderer>().enabled = true;
