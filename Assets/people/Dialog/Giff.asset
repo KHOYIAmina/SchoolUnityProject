@@ -27,11 +27,9 @@ MonoBehaviour:
   playerDialogue:
   - '"Bonjour cava  je suis HANAOUI Wissal. S''il vous plait. Quel est ton avis sur
     la formation en EST"'
-  - "\"Bonjour cava  je suis HANAOUI Wissal. S'il vous plait. J'entends dire que
-    les professeurs apr\xE8s le bac sont diff\xE9rents des professeurs auxquels nous
-    sommes habitu\xE9s\""
-  - "\"Bonjour cava  je suis HANAOUI Wissal. S'il vous plait. Je veux demander. J'ai
-    un peu peur de cette \xE9cole parce que je n'en ai jamais entendu parler auparavant.
-    La plupart de mes amis m'ont conseill\xE9 de le laisser et je ne sais pas quoi
-    faire\" "
+  - "S'il vous plait. J'entends dire que les professeurs apr\xE8s le bac sont diff\xE9rents
+    des professeurs auxquels nous sommes habitu\xE9s\""
+  - "Je veux demander. J'ai un peu peur de cette \xE9cole parce que je n'en ai jamais
+    entendu parler auparavant. La plupart de mes amis m'ont conseill\xE9 de le laisser
+    et je ne sais pas quoi faire\" "
   - 'Merci '
