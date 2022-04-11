@@ -12,6 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c23c2eb783b6f749becfa5d16655eaf, type: 3}
   m_Name: Giff
   m_EditorClassIdentifier: 
-  name: 
-  dialogue: []
-  playerDialogue: []
+  name: "Etudiante g\xE9nie civil 2\xE9me ann\xE9e :"
+  dialogue:
+  - "\"Bonjour cv d'abord bienvenue chez nous. je suis KHOYI Amina je suis \xE9tudiante
+    en 2\xE9me ann\xE9e g\xE9nie civil. a mon avis la formation en ESTS contient
+    plusieurs module qui vous aidera dans cycle d'ing\xE9nieur \""
+  - "\"Bonjour cv d'abord bienvenue chez nous. je suis KHOYI Amina je suis \xE9tudiante
+    en 2\xE9me ann\xE9e g\xE9nie civil. Vous ne pouvez pas juger un professeur si
+    vous ne le connaissez pas et n'assistez pas \xE0 ses cours. Parce que la plupart
+    des \xE9tudiants qui disent cela n'ont probablement pas assist\xE9 \xE0 leur
+    classe\""
+  - 
+  - 
+  playerDialogue:
+  - '"Bonjour cava  je suis HANAOUI Wissal. S''il vous plait. Quel est ton avis sur
+    la formation en EST"'
+  - "\"Bonjour cava  je suis HANAOUI Wissal. S'il vous plait. J'entends dire que
+    les professeurs apr\xE8s le bac sont diff\xE9rents des professeurs auxquels nous
+    sommes habitu\xE9s\""
+  - "\"Bonjour cava  je suis HANAOUI Wissal. S'il vous plait. Je veux demander. J'ai
+    un peu peur de cette \xE9cole parce que je n'en ai jamais entendu parler auparavant.
+    La plupart de mes amis m'ont conseill\xE9 de le laisser et je ne sais pas quoi
+    faire\" "
