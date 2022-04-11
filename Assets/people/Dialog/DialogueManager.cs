@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject player;
     public GameObject ActionDisplay;
     public GameObject dialogueUI;
+    public GameObject Message;
+
 
     public Text npcName;
     public Text npcDialogueBox;
@@ -28,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueUI.SetActive(false);
+        Message.SetActive(True);
     }
 
     void OnMouseOver()
