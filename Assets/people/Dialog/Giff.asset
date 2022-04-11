@@ -22,8 +22,12 @@ MonoBehaviour:
     vous ne le connaissez pas et n'assistez pas \xE0 ses cours. Parce que la plupart
     des \xE9tudiants qui disent cela n'ont probablement pas assist\xE9 \xE0 leur
     classe\""
-  - 
-  - 
+  - "\"Bonjour cv d'abord bienvenue chez nous. je suis KHOYI Amina je suis \xE9tudiante
+    en 2\xE9me ann\xE9e g\xE9nie civil. La plupart des \xE9tudiants disent cela,
+    mais essayez de vous occuper de votre sp\xE9cialit\xE9 et aimez le travail que
+    vous faites.\""
+  - 'De rien '
+  - et bienvenue
   playerDialogue:
   - '"Bonjour cava  je suis HANAOUI Wissal. S''il vous plait. Quel est ton avis sur
     la formation en EST"'
@@ -34,3 +38,4 @@ MonoBehaviour:
     un peu peur de cette \xE9cole parce que je n'en ai jamais entendu parler auparavant.
     La plupart de mes amis m'ont conseill\xE9 de le laisser et je ne sais pas quoi
     faire\" "
+  - 'Merci '
