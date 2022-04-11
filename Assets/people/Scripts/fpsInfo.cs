@@ -10,6 +10,7 @@ public class fpsInfo : MonoBehaviour
     public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
+     public AudioSource audio = null;
     // public GameObject ppt;
 
     // public AudioSource ButtonAudioSource = null;
@@ -35,6 +36,7 @@ public class fpsInfo : MonoBehaviour
             TheCamera.GetComponent<Animator>().enabled = true;
             ThePlayer.GetComponent<Animator>().Play("FPSInfo");
             TheCamera.GetComponent<Animator>().Play("cfpsInfo");
+            audio.Stop();
 
             // ButtonAudioSource.PlayDelayed(Button);
             // ppt.GetComponent<MeshRenderer>().enabled = true;

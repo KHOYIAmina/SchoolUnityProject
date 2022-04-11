@@ -8,12 +8,12 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class FP1 : MonoBehaviour
 {
     // Start is called before the first frame update
-   public GameObject ActionDisplay;
+    public GameObject ActionDisplay;
     public GameObject ThePlayer;
     public GameObject TheCamera;
     public AudioSource ButtonAudioSource = null;
-  
-     public float Button = 0;
+    public AudioSource Audio = null;
+    public float Button = 0;
     bool j; 
     // Start is called before the first frame update
    /* void Start()
@@ -41,6 +41,7 @@ public class FP1 : MonoBehaviour
             ThePlayer.GetComponent<Animator>().Play("FPS2");
             TheCamera.GetComponent<Animator>().Play("cfps2"); 
             ButtonAudioSource.Stop();
+            Audio.Play();
            
             StartCoroutine("Ws");
         }else if (Input.GetKeyDown(KeyCode.T))

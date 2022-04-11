@@ -17,6 +17,7 @@ public class FP : MonoBehaviour
     public AudioSource ButtonAudioSource = null;
     public AudioSource ButtonAudioSource1 = null;
     public AudioSource ButtonAudioSource2 = null;
+    public AudioSource Audio = null;
      public float Button = 0;
     bool j; 
     // Start is called before the first frame update
@@ -47,6 +48,7 @@ public class FP : MonoBehaviour
             ButtonAudioSource.Stop();
             ButtonAudioSource1.Stop();
             ButtonAudioSource2.Stop();
+            Audio.Play();
             ppt.GetComponent<MeshRenderer>().enabled = false;
             StartCoroutine("Ws");
         }else if (Input.GetKeyDown(KeyCode.T))
