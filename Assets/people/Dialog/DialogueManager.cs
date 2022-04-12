@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueUI.SetActive(false);
-        Message.SetActive(True);
+        Message.SetActive(true);
     }
 
     void OnMouseOver()
