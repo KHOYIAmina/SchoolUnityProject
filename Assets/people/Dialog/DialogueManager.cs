@@ -17,7 +17,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject player;
     public GameObject ActionDisplay;
     public GameObject dialogueUI;
-    public GameObject Message;
 
 
     public Text npcName;
@@ -30,13 +29,12 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueUI.SetActive(false);
-        Message.SetActive(true);
     }
 
     void OnMouseOver()
     {
         distance = Vector3.Distance(player.transform.position, this.transform.position);
-        if(distance <= 2.5f)
+        if(distance <= 3f)
         {
             ActionDisplay.SetActive(true);
             if(Input.GetAxis("Mouse ScrollWheel") < 0f)
