@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class PauseMenuFinal : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool InstrMIsalse = true;
     public GameObject pauseMenuUI;
+    public GameObject InstrMenu;
     void Update()
     {
         
@@ -32,6 +34,16 @@ public class PauseMenuFinal : MonoBehaviour
             Menu();
         }
         }
+        if(Input.GetKeyDown(KeyCode.I)){
+            if (InstrMIsalse)
+        {
+             Instrf();
+        }else
+        {
+            Instrt();
+        } 
+                }
+
         
     }
     
@@ -39,11 +51,17 @@ public class PauseMenuFinal : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in audios)
+        {
+            a.Play();
+        }
     }
     void Pause(){
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        
     }
     
     public void QuitGame(){
@@ -54,5 +72,13 @@ public class PauseMenuFinal : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
         
+    }
+    public void Instrf(){
+        InstrMenu.SetActive(false);
+        InstrMIsalse = false;
+    }
+    public void Instrt(){
+        InstrMenu.SetActive(true);
+        InstrMIsalse = true;
     }
 }
