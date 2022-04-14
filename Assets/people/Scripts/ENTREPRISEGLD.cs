@@ -10,7 +10,7 @@ public class ENTREPRISEGLD : MonoBehaviour
    public GameObject ActionDisplay;
     // public GameObject subText;
     public AudioSource ButtonAudioSource = null;
-  //  public AudioSource Audiodawdaa = null;
+  public AudioSource Audiodawdaa = null;
     
 
   
@@ -22,11 +22,11 @@ public class ENTREPRISEGLD : MonoBehaviour
         {
             
             ButtonAudioSource.Stop();
-           // Audiodawdaa.Play();
+            Audiodawdaa.Play();
         }else if (Input.GetKeyDown(KeyCode.T))
         {
                 ButtonAudioSource.PlayDelayed(0.2f);
-        
+        Audiodawdaa.Stop();
         }
          
           

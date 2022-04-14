@@ -9,6 +9,7 @@ public class PauseMenuFinal : MonoBehaviour
     public static bool InstrMIsalse = true;
     public GameObject pauseMenuUI;
     public GameObject InstrMenu;
+    public AudioSource Audiodawdaa = null;
     void Update()
     {
         
@@ -51,16 +52,17 @@ public class PauseMenuFinal : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
-        AudioSource[] audios = FindObjectsOfType<AudioSource>();
-        foreach (AudioSource a in audios)
-        {
-            a.Play();
-        }
+        Audiodawdaa.Play();
     }
     void Pause(){
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in audios)
+        {
+            a.Stop();
+        }
         
     }
     
