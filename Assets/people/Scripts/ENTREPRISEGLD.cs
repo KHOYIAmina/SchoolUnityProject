@@ -30,7 +30,7 @@ public class ENTREPRISEGLD : MonoBehaviour
         }else if (Input.GetKeyDown(KeyCode.T))
         {
                 ButtonAudioSource.PlayDelayed(0.2f);
-                ButtonAudioSource1.PlayDelayed(80f);
+                ButtonAudioSource1.PlayDelayed(24f);
                 ButtonAudioSource2.PlayDelayed(86f);
         
         }
