@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class PauseMenuFinal : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-    public GameObject instructionsMenu;
     void Update()
     {
         
@@ -21,19 +20,21 @@ public class PauseMenu : MonoBehaviour
             Pause();
         }  
         }
+        if(Input.GetKeyDown(KeyCode.Q)){
+            if (GameIsPaused)
+        {
+            QuitGame();
+        }
+        }
+        if(Input.GetKeyDown(KeyCode.M)){
+            if (GameIsPaused)
+        {
+            Menu();
+        }
+        }
         
     }
-    public void instructions(){
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        pauseMenuUI.SetActive(true);
-        instructionsMenu.SetActive(false);
-    }
-    public void PauseInstru(){
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        
-    }
+    
     public void Resume(){
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -44,17 +45,14 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
-    public void home(){
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        
-    }
-    public void next(){
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
     public void QuitGame(){
         Debug.Log("quitter!");
         Application.Quit();
+    }
+    public void Menu(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+        
     }
 }
