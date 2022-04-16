@@ -6,9 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GL.unity
+    path: Assets/EntrepriseProject/Scenes/MainMenu.unity
+    guid: 23780f56f57b9c94b962eca28407b927
+  - enabled: 1
+    path: Assets/Scenes/GLEcole.unity
     guid: dd099e1bfd1ff744eb4366c165e8499e
   - enabled: 1
-    path: Assets/Scenes/travailGL.unity
+    path: Assets/EntrepriseProject/Scenes/GCStage.unity
+    guid: 71d155320c14ba340919936eafe5bc05
+  - enabled: 1
+    path: Assets/Scenes/GLEntr.unity
     guid: a154a883e8219415aa1e440589e134ed
+  - enabled: 1
+    path: Assets/Scenes/GCEcole.unity
+    guid: 98aa1bdd998ef9b4f8775cbbf9fd05c2
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/GLStage.unity
+    guid: 5cac6abbf2b53ce4994509445ce7947a
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/GCEntr.unity
+    guid: a7227f3f39fe8ce41ba22e3bfb8b1626
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/ApresGCEcole.unity
+    guid: e6a0a7a1ed26ed94aa77c841232c8756
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/ApresGCStage.unity
+    guid: 182a2aca99bb42542b05e1a846183e09
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/ApresGCEntr.unity
+    guid: 695d737455db3114ab0f395c1d1e7266
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/ApresGLEcole.unity
+    guid: f54942dcf9915f044b2917e274f5f1ce
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/ApresGLStage.unity
+    guid: 6112e40600bd6f343a66f19298bb7069
+  - enabled: 1
+    path: Assets/EntrepriseProject/Scenes/ApresGLEntr.unity
+    guid: 079bc226cb556e647a63249f116d156b
   m_configObjects: {}

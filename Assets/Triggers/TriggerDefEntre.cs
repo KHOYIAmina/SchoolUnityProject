@@ -29,13 +29,13 @@ public class TriggerDefEntre : MonoBehaviour
         
     }
     IEnumerator Ws(){
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(7);
         Destroy(obt);
         obt2.SetActive(true);
         StartCoroutine("Ws2");
         }
     IEnumerator Ws2(){
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(10);
         Destroy(obt2);
         Destroy(gameObject);
         Panel.SetActive(false);
