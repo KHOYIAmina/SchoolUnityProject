@@ -9,6 +9,7 @@ public class person : MonoBehaviour
     public GameObject ThePlayer;
     public GameObject TheCamera;
     public AudioSource ButtonAudioSource = null;
+    public AudioSource Audiodawdaa = null;
     public GameObject ActionDisplay;
     float distance;
 
@@ -22,6 +23,7 @@ public class person : MonoBehaviour
                 obt.SetActive(true);
                 Panel.SetActive(true);
                 ButtonAudioSource.Play();
+                Audiodawdaa.Stop();
             }
         }
     }
@@ -32,5 +34,6 @@ public class person : MonoBehaviour
         ButtonAudioSource.Stop();
         obt.SetActive(false);
         Panel.SetActive(false);
+         Audiodawdaa.Play();
     }
 }
