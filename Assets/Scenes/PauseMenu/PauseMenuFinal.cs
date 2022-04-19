@@ -12,8 +12,6 @@ public class PauseMenuFinal : MonoBehaviour
     public AudioSource Audiodawdaa = null;
     void Update()
     {
-        
-        
         if(Input.GetKeyDown(KeyCode.Escape)){
           if (GameIsPaused)
         {
@@ -33,6 +31,12 @@ public class PauseMenuFinal : MonoBehaviour
             if (GameIsPaused)
         {
             Menu();
+        }
+        }
+        if(Input.GetKeyDown(KeyCode.N)){
+            if (GameIsPaused)
+        {
+            Next();
         }
         }
         if(Input.GetKeyDown(KeyCode.I)){
@@ -65,7 +69,19 @@ public class PauseMenuFinal : MonoBehaviour
         }
         
     }
-    
+    public void NextApresGLEntr(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGLEntr");
+        
+    }
+    public void PlayGameglapresEc(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGLEcole");
+    }
+    public void PlayGamegcapresEc(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGCEcole");
+    }
     public void QuitGame(){
         Debug.Log("quitter!");
         Application.Quit();
@@ -73,6 +89,11 @@ public class PauseMenuFinal : MonoBehaviour
     public void Menu(){
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+        
+    }
+    public void Next(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGLEntr");
         
     }
     public void Instrf(){
@@ -83,4 +104,8 @@ public class PauseMenuFinal : MonoBehaviour
         InstrMenu.SetActive(true);
         InstrMIsalse = true;
     }
+    /*public void nextglecole(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }*/
 }

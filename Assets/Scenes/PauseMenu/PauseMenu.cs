@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public static bool InstrMIsalse = true;
     public GameObject pauseMenuUI;
-    public GameObject instructionsMenu;
+    public GameObject InstrMenu;
+    public AudioSource Audiodawdaa = null;
     void Update()
     {
-        
-        
         if(Input.GetKeyDown(KeyCode.Escape)){
           if (GameIsPaused)
         {
@@ -21,40 +21,74 @@ public class PauseMenu : MonoBehaviour
             Pause();
         }  
         }
-        
-    }
-    public void instructions(){
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        pauseMenuUI.SetActive(true);
-        instructionsMenu.SetActive(false);
-    }
-    public void PauseInstru(){
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        
+        if(Input.GetKeyDown(KeyCode.I)){
+            if (InstrMIsalse)
+        {
+             instrf();
+        }else
+        {
+            instrt();
+        } 
+                }
+
     }
     public void Resume(){
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        Audiodawdaa.Play();
     }
     void Pause(){
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-    }
-    public void home(){
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        AudioSource[] audios = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource a in audios)
+        {
+            a.Stop();
+        }
         
     }
-    public void next(){
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    
     public void QuitGame(){
         Debug.Log("quitter!");
         Application.Quit();
+    }
+    public void Menu(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+        
+    }
+    public void Next(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGCStage");
+        
+    }
+    public void NextApresGLStag(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGLStage");
+        
+    }
+    public void NextApresGCEntr(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("ApresGCEntr");
+        
+    }
+    
+    public void Instrf(){
+        InstrMenu.SetActive(false);
+        InstrMIsalse = false;
+    }
+    public void Instrt(){
+        InstrMenu.SetActive(true);
+        InstrMIsalse = true;
+    }
+    public void instrf(){
+        InstrMenu.SetActive(false);
+        InstrMIsalse = false;
+    }
+    public void instrt(){
+        InstrMenu.SetActive(true);
+        InstrMIsalse = true;
     }
 }

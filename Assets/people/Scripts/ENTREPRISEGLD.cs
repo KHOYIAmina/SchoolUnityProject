@@ -11,12 +11,15 @@ public class ENTREPRISEGLD : MonoBehaviour
     // public GameObject subText;
     public AudioSource ButtonAudioSource = null;
   public AudioSource Audiodawdaa = null;
-    
+  float distance;
+    public GameObject player;
 
   
     void OnMouseOver()
     {
-        
+        distance = Vector3.Distance(player.transform.position, this.transform.position);
+        if(distance <= 3f)
+        {
             ActionDisplay.SetActive(true);
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -29,7 +32,7 @@ public class ENTREPRISEGLD : MonoBehaviour
         Audiodawdaa.Stop();
         }
          
-          
+        }
     }
 
     
