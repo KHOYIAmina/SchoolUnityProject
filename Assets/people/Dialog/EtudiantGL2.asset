@@ -15,14 +15,15 @@ MonoBehaviour:
   name: EtudiantGL2
   dialogue:
   - Bonjour et bienvenue, comment je peux vous aider?
-  - "C'est mieux , mais pas forcemment le plus inportant est d'etre s\xE9rieux et
-    \xE0 jour "
-  - "Ca depant de ton capacit\xE9 de comprendre en g\xE9n\xE9ral si tu suit le prof
-    et tu fait un effort personnel en regardant des tutoriel sur Youtube ou bien
-    r\xE9aliser des petite projets\n  jc ca vv vous aider beaucoup  "
+  - "C'est mieux , mais pas forc\xE9ment. le plus important est d'\xEAtre s\xE9rieux
+    et \xE0 jour"
+  - "\xC7a d\xE9pend de ta capacit\xE9 de comprendre en g\xE9n\xE9ral si vous suivez
+    avec le prof et vous faites un effort personnel chez vous, les r\xE9sultats vont
+    \xEAtre meilleurs"
   - Avec plaisir
   playerDialogue:
-  - "Bonjour , je suis confus\xE9 , est ce qu'il faut avoir des fortes connaissances
-    dans le domaine d'informatique avant d'integrer dans cette formation ?"
-  - Et pour les matiers est qu'elles sont difficiles?
+  - "Bonjour, je suis Kawtar RACHEK, j'ai quelques questionnements sur le choix de
+    cette fili\xE8re, est ce qu'il faut avoir des fortes connaissances dans ce domaine
+    d'informatique avant d'integrer cette formation ?"
+  - "Et pour les mati\xE8res sont elles difficiles?"
   - Merci beaucoup
